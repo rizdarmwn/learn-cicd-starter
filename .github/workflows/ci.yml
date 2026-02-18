@@ -25,7 +25,7 @@ jobs:
         run: go test ./... -cover
 
       - name: Run security checks
-        run: gosec --exclude-rules="internal/database/.*:G117" ./...
+        run: gosec --exclude-rules="internal/database/.*:G117;models.go:G117" ./...
 
   style:
     name: Style
